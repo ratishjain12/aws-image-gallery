@@ -8,8 +8,8 @@ dotenv.config();
 const s3 = new S3Client({
   region: "ap-south-1",
   credentials: {
-    accessKeyId: "AKIA57YG2QIAE7KRSXGW",
-    secretAccessKey: "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",
+    accessKeyId: `${process.env.ACCESS_KEY}`,
+    secretAccessKey: `${process.env.ACCESS_SECRET}`,
   },
 });
 
