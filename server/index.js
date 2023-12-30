@@ -7,7 +7,7 @@ const { uploadToS3, getURL } = require("./s3");
 const dotenv = require("dotenv");
 const dbconnect = require("./connect");
 const IMG = require("./models/images");
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 dotenv.config();
 app.use(cors({ origin: "*" }));
